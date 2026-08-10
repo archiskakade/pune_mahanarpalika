@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>पाणी पुरवठा वेळ</title>
+
+    <link rel="stylesheet" href="css/water-supply.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="water-container">
+
+    <!-- Header -->
+
+    <div class="water-header">
+
+        <div class="header-icon">
+
+            <i class="fas fa-clock"></i>
+
+        </div>
+        
+
+        <div>
+
+            <h1>पाणी पुरवठ्याचे वेळ</h1>
+
+            <p>प्रभागातील पाणी पुरवठा वेळापत्रक</p>
+
+        </div>
+         <!-- Close Button -->
+    <button
+        type="button"
+        class="close-btn"
+        onclick="goBack()"
+        aria-label="Close">
+        ×
+    </button>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="search-box">
+
+        <i class="fas fa-search"></i>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="तुमचे क्षेत्र शोधा">
+
+    </div>
+
+    <!-- Cards -->
+
+    <div class="water-grid">
+                <!-- Card 1 -->
+
+        <div class="water-card">
+
+            <h3>प्रभाग क्र. १</h3>
+
+            <div class="card-info">
+
+                <p>
+                    <i class="fas fa-clock"></i>
+                    सकाळी ६:०० ते ८:००
+                </p>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    घोरपडे पेठ
+                </p>
+
+            </div>
+
+            <span class="status running">
+
+                <i class="fas fa-circle"></i>
+
+                सुरू आहे
+
+            </span>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="water-card">
+
+            <h3>प्रभाग क्र. २</h3>
+
+            <div class="card-info">
+
+                <p>
+                    <i class="fas fa-clock"></i>
+                    सकाळी ८:३० ते १०:३०
+                </p>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    गुरुवार पेठ
+                </p>
+
+            </div>
+
+            <span class="status stopped">
+
+                <i class="fas fa-circle"></i>
+
+                बंद
+
+            </span>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="water-card">
+
+            <h3>प्रभाग क्र. ३</h3>
+
+            <div class="card-info">
+
+                <p>
+                    <i class="fas fa-clock"></i>
+                    सकाळी १०:३० ते १२:००
+                </p>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    समताभूमी
+                </p>
+
+            </div>
+
+            <span class="status running">
+
+                <i class="fas fa-circle"></i>
+
+                सुरू आहे
+
+            </span>
+
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="water-card">
+
+            <h3>प्रभाग क्र. ४</h3>
+
+            <div class="card-info">
+
+                <p>
+                    <i class="fas fa-clock"></i>
+                    दुपारी १:०० ते ३:००
+                </p>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    भवानी पेठ
+                </p>
+
+            </div>
+
+            <span class="status stopped">
+
+                <i class="fas fa-circle"></i>
+
+                बंद
+
+            </span>
+
+        </div>
+
+        <!-- Card 5 -->
+
+        <div class="water-card">
+
+            <h3>प्रभाग क्र. ५</h3>
+
+            <div class="card-info">
+
+                <p>
+                    <i class="fas fa-clock"></i>
+                    संध्याकाळी ४:०० ते ६:००
+                </p>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    कसबा पेठ
+                </p>
+
+            </div>
+
+            <span class="status running">
+
+                <i class="fas fa-circle"></i>
+
+                सुरू आहे
+
+            </span>
+
+        </div>
+
+        <!-- Card 6 -->
+
+        <div class="water-card">
+
+            <h3>प्रभाग क्र. ६</h3>
+
+            <div class="card-info">
+
+                <p>
+                    <i class="fas fa-clock"></i>
+                    संध्याकाळी ६:३० ते ८:००
+                </p>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    शुक्रवार पेठ
+                </p>
+
+            </div>
+
+            <span class="status stopped">
+
+                <i class="fas fa-circle"></i>
+
+                बंद
+
+            </span>
+
+        </div>
+
+<!-- Footer -->
+
+<footer class="form-footer">
+
+    <p>© 2026 नागरिक सेवा</p>
+
+    <p>आपली माहिती सुरक्षित ठेवली जाईल.</p>
+
+</footer>
+
+    </div>
+
+</div>
+
+<script src="js/water-supply.js"></script>
+
+</body>
+
+</html>

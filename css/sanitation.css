@@ -1,0 +1,701 @@
+/* ==========================================
+   Reset
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f7fb;
+
+    color:#333;
+
+    line-height:1.6;
+
+}
+
+/* ==========================================
+   Container
+========================================== */
+
+.sanitation-container{
+
+    width:100%;
+    max-width:1000px;
+
+    margin:30px auto;
+
+    padding:20px;
+
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.sanitation-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:#fff;
+
+    padding:22px;
+
+    border-radius:14px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    margin-bottom:25px;
+
+}
+
+.header-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#ff9800;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+}
+
+.header-content h1{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:5px;
+
+}
+
+.header-content p{
+
+    font-size:14px;
+
+    color:#777;
+
+}
+
+/* ==========================================
+   Form Card
+========================================== */
+
+.form-card{
+
+    background:#fff;
+
+    border-radius:14px;
+
+    padding:30px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   Form Section
+========================================== */
+
+.form-section{
+
+    margin-bottom:35px;
+
+}
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+    border-bottom:2px solid #f2f2f2;
+
+    padding-bottom:10px;
+
+}
+
+.section-title i{
+
+    color:#ff9800;
+
+    font-size:18px;
+
+}
+
+.section-title h3{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#222;
+
+}
+
+/* ==========================================
+   Grid
+========================================== */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.full-width{
+
+    grid-column:1 / -1;
+
+}
+/* ==========================================
+   Form Group
+========================================== */
+
+.form-group{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    font-size:14px;
+    font-weight:600;
+    color:#444;
+    margin-bottom:8px;
+
+}
+
+.form-group span{
+
+    color:#e53935;
+
+}
+
+/* ==========================================
+   Input Fields
+========================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:12px 14px;
+
+    border:1px solid #d8d8d8;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    font-family:'Poppins',sans-serif;
+
+    background:#fff;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#ff9800;
+
+    box-shadow:0 0 0 3px rgba(255,152,0,.15);
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+::placeholder{
+
+    color:#999;
+
+}
+
+/* ==========================================
+   Upload Box
+========================================== */
+
+.upload-box{
+
+    border:2px dashed #ffb74d;
+
+    background:#fffaf2;
+
+    border-radius:12px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+}
+
+.upload-icon{
+
+    font-size:42px;
+
+    color:#ff9800;
+
+    margin-bottom:15px;
+
+}
+
+.upload-box h4{
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+    color:#333;
+
+}
+
+.upload-box p{
+
+    color:#777;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+.upload-box input{
+
+    width:100%;
+
+}
+
+/* ==========================================
+   Submit Button
+========================================== */
+
+.submit-area{
+
+    margin-top:30px;
+
+}
+
+.submit-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(90deg,#ff9800,#ff6f00);
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.submit-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(255,152,0,.30);
+
+}
+
+/* ==========================================
+   Success Card
+========================================== */
+
+.success-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    margin-top:25px;
+
+    padding:18px;
+
+    background:#e8f5e9;
+
+    border-left:5px solid #4caf50;
+
+    border-radius:10px;
+
+}
+
+.success-card i{
+
+    color:#4caf50;
+
+    font-size:28px;
+
+}
+
+.success-card h4{
+
+    margin-bottom:6px;
+
+    color:#2e7d32;
+
+}
+
+.success-card p{
+
+    color:#555;
+
+    font-size:14px;
+
+}
+/* ==========================================
+   Tablet
+========================================== */
+
+@media screen and (max-width:768px){
+
+    .sanitation-container{
+
+        padding:15px;
+
+    }
+
+    .sanitation-header{
+
+        padding:18px;
+
+    }
+
+    .header-content h1{
+
+        font-size:24px;
+
+    }
+
+    .form-card{
+
+        padding:20px;
+
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media screen and (max-width:480px){
+
+    .sanitation-container{
+
+        padding:10px;
+
+    }
+
+    .sanitation-header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:12px;
+
+        padding:18px 15px;
+
+    }
+
+    .header-icon{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:22px;
+
+    }
+
+    .header-content h1{
+
+        font-size:20px;
+
+        line-height:1.3;
+
+    }
+
+    .header-content p{
+
+        font-size:12px;
+
+    }
+
+    .form-card{
+
+        padding:15px;
+
+        border-radius:10px;
+
+    }
+
+    .section-title h3{
+
+        font-size:16px;
+
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+    }
+
+    .form-group label{
+
+        font-size:13px;
+
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+
+        font-size:14px;
+
+        padding:11px;
+
+    }
+
+    .upload-box{
+
+        padding:20px 15px;
+
+    }
+
+    .upload-icon{
+
+        font-size:34px;
+
+    }
+
+    .upload-box h4{
+
+        font-size:18px;
+
+    }
+
+    .upload-box p{
+
+        font-size:13px;
+
+    }
+
+    .success-card{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+    .submit-btn{
+
+        font-size:16px;
+
+        padding:14px;
+
+    }
+
+}
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media screen and (max-width:360px){
+
+    .header-content h1{
+
+        font-size:18px;
+
+    }
+
+    .section-title h3{
+
+        font-size:15px;
+
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+
+        font-size:13px;
+
+    }
+
+}
+/* =========================================
+   HEADER
+========================================= */
+
+.sanitation-header {
+    position: relative;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.close-btn {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #555;
+
+    font-size: 23px;
+    line-height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 100;
+}
+
+.close-btn:hover {
+    background: #f2f2f2;
+    color: #ff7600;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.form-footer {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 10px;
+
+    background: #fff;
+
+    border-top: 1px solid #e5e5e5;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.form-footer p {
+    margin: 3px 0;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    color: #777;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width:480px) {
+
+    .close-btn {
+        top: 5px;
+        right: 5px;
+
+        width: 24px;
+        height: 24px;
+
+        font-size: 20px;
+    }
+
+    .form-footer {
+        padding: 8px;
+    }
+
+    .form-footer p {
+        font-size: 9px;
+    }
+
+}

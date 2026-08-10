@@ -1,0 +1,1167 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f2f4f8;
+}
+
+/* Main Container */
+
+.container{
+    width:100%;
+    max-width:430px;
+    min-height:auto;
+    margin:20px auto;
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+    padding-bottom:0;
+}
+/* Complaint Page Container */
+
+.complaint-container{
+
+    max-width:390px;
+
+    margin:0 auto;
+
+    border-radius:20px;
+
+}
+/* ==========================================
+   Main Hero Header
+========================================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:380px;
+
+    background:#fff0df;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
+
+}
+
+
+/* ==========================================
+   Hero Content
+========================================== */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    display:flex;
+
+    align-items:center;
+
+    width:100%;
+
+    min-height:380px;
+
+    padding:35px 40px;
+
+}
+
+
+/* ==========================================
+   Left Section
+========================================== */
+
+.hero-left{
+
+    width:24%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding-right:30px;
+
+    border-right:3px solid #ff7100;
+
+}
+
+
+.logo{
+
+    width:170px;
+
+    height:170px;
+
+    object-fit:contain;
+
+}
+
+
+/* ==========================================
+   Center Text
+========================================== */
+
+.hero-text{
+
+    width:52%;
+
+    padding-left:35px;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+
+.hero-tagline{
+
+    font-size:9px;
+
+    color:#222;
+
+    line-height:1.3;
+
+    margin-bottom:8px;
+
+}
+
+
+.hero-text h1{
+
+    font-size:55px;
+
+    font-weight:800;
+
+    line-height:1.05;
+
+    color:#111;
+
+    margin:0 0 20px 0;
+
+}
+
+
+.hero-text span{
+
+    display:block;
+
+    font-size:25px;
+
+    line-height:1.55;
+
+    color:#333;
+
+    white-space:normal;
+
+}
+
+
+/* ==========================================
+   Right Leader Image
+========================================== */
+
+.hero-right{
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:31%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:flex-end;
+
+    z-index:3;
+
+}
+
+
+.hero-right img{
+
+    width:100%;
+
+    max-width:400px;
+
+    height:auto;
+
+    max-height:100%;
+
+    object-fit:contain;
+
+    object-position:bottom right;
+
+    display:block;
+
+}
+
+
+/* ==========================================
+   Orange Button
+========================================== */
+
+.hero-btn{
+
+    position:absolute;
+
+    left:32%;
+
+    bottom:30px;
+
+    z-index:20;
+
+}
+
+
+.hero-btn a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 45px;
+
+    background:linear-gradient(
+        90deg,
+        #ff8a00,
+        #ff6500
+    );
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+    box-shadow:0 7px 15px rgba(255,115,0,.25);
+
+}
+
+
+.hero-btn a:hover{
+
+    background:#ff7000;
+
+}
+/* ===================================
+   Building Banner
+=================================== */
+
+.banner{
+    position:relative;
+    margin:0;
+    padding:0;
+    line-height:0;
+    z-index:1;
+}
+
+.banner img{
+    width:100%;
+    height:90px;
+    object-fit:cover;
+    display:block;
+}
+/* ===================================
+   Announcement Card
+=================================== */
+
+.announcement{
+    width:92%;
+    margin:18px auto;
+    background:#fffaf5;
+    border-radius:18px;
+    padding:16px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    border:1px solid #f3e3d5;
+}
+
+.announcement-icon{
+
+    width:52px;
+
+    height:52px;
+
+    background:#ff7a00;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.announcement-icon i{
+
+    color:#fff;
+
+    font-size:22px;
+
+}
+.announcement-text{
+    flex:1;
+    min-width:0;
+}
+
+.announcement-text h3{
+    font-size:15px;
+    font-weight:700;
+    color:#333;
+    white-space:nowrap;
+    letter-spacing:-0.3px;
+}
+
+.announcement-text p{
+    font-size:13px;
+    font-weight:600;
+    color:#ff7a00;
+}
+/* ===============================
+   News Ticker
+================================ */
+
+.news-ticker{
+
+    width:100%;
+
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    background:#edf7e8;
+
+    border:1px solid #d7e7cd;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    margin:15px 0;
+
+}
+
+/* Left Box */
+
+.news-left{
+
+    width:140px;
+
+    height:100%;
+
+    background:#dff0d3;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    color:#2f8a34;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    border-right:1px solid #cfe1c5;
+
+    white-space:nowrap;
+
+    flex-shrink:0;
+
+}
+
+.news-left i{
+
+    font-size:16px;
+
+}
+
+/* Right */
+
+.news-right{
+
+    flex:1;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:0 15px;
+
+}
+
+.news-right marquee{
+
+    color:#666;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+/* ===================================
+   Section Title
+=================================== */
+
+.section-title{
+
+    width:92%;
+
+    margin:25px auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.section-title .line{
+
+    flex:1;
+
+    height:2px;
+
+    background:#d9b98b;
+
+}
+
+.section-title h2{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#333;
+
+    white-space:nowrap;
+
+}
+/* ===================================
+   Services
+=================================== */
+
+.services{
+
+    width:92%;
+
+    margin:20px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+
+}
+/* Remove underline from service links */
+
+.services a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+.service-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:20px 10px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+}
+
+.icon{
+
+    width:60px;
+
+    height:60px;
+
+    margin:0 auto 15px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:24px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+}
+
+/* Icon Colors */
+
+.complaint{background:#ff5b6b;}
+.tax{background:#6ac44b;}
+.water{background:#39aaf5;}
+.garbage{background:#ffb229;}
+.birth{background:#9b59b6;}
+.home-service{background:#ff4f9a;}
+.citizen{background:#22b8b5;}
+.notice{background:#ffb229;}
+.contact{background:#795548;}
+
+.service-card h3{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin-bottom:6px;
+
+    line-height:1.3;
+
+}
+
+.service-card p{
+
+    font-size:12px;
+
+    color:#777;
+
+    line-height:1.4;
+
+}
+/* ===================================
+   Bottom Navigation
+=================================== */
+
+.bottom-nav{
+
+    width:100%;
+
+    height:78px;
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    border-top:1px solid #e8e8e8;
+
+    box-shadow:0 -2px 10px rgba(0,0,0,.05);
+
+}
+
+.bottom-nav a{
+
+    flex:1;
+
+    height:100%;
+
+    text-decoration:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#666;
+
+    transition:.3s;
+
+}
+
+.bottom-nav a i{
+
+    font-size:24px;
+
+    margin-bottom:6px;
+
+}
+
+.bottom-nav a span{
+
+    font-size:13px;
+
+    font-weight:500;
+
+    line-height:1;
+
+}
+
+.bottom-nav a.active{
+
+    color:#ff7a00;
+
+}
+
+.bottom-nav a:hover{
+
+    color:#ff7a00;
+
+}
+/* ===================================
+   Complaint Page
+=================================== */
+
+.complaint-header{
+
+    padding:20px;
+
+    border-bottom:2px solid #ff8a00;
+
+}
+
+.complaint-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.title-icon{
+
+    width:42px;
+
+    height:42px;
+
+    background:#ff8a00;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:18px;
+
+}
+
+.complaint-title h1{
+
+    font-size:28px;
+
+    margin-bottom:5px;
+
+}
+
+.complaint-title p{
+
+    font-size:12px;
+
+    color:#666;
+
+}
+
+.complaint-header img{
+
+    width:160px;
+
+    float:right;
+
+    margin-top:10px;
+
+    opacity:.18;
+
+}
+/* ===================================
+   Complaint Form
+=================================== */
+
+.complaint-form{
+
+    padding:20px;
+
+}
+
+.form-group{
+
+    margin-bottom:18px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#333;
+
+}
+
+.form-group label span{
+
+    color:red;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:13px 15px;
+
+    border:1px solid #d9d9d9;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.form-group textarea{
+
+    resize:none;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#ff7a00;
+
+    box-shadow:0 0 5px rgba(255,122,0,.25);
+
+}
+/* ===================================
+   Submit Button
+=================================== */
+
+.submit-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#ff7a00;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.submit-btn i{
+
+    margin-right:8px;
+
+}
+
+.submit-btn:hover{
+
+    background:#e86f00;
+
+}
+/* ===================================
+   Mobile Responsive
+=================================== */
+
+@media (max-width:768px){
+
+    body{
+        background:#f2f4f8;
+    }
+
+    .container{
+
+        width:100%;
+
+        max-width:390px;
+
+        margin:0 auto;
+
+        border-radius:18px;
+
+        overflow:hidden;
+
+    }
+
+    /* Header */
+
+    .complaint-header{
+
+        padding:12px 14px;
+
+    }
+
+    .complaint-title{
+
+        gap:10px;
+
+        align-items:flex-start;
+
+    }
+
+    .title-icon{
+
+        width:34px;
+
+        height:34px;
+
+        font-size:15px;
+
+        border-radius:8px;
+
+    }
+
+    .complaint-title h1{
+
+        font-size:22px;
+
+        margin-bottom:2px;
+
+    }
+
+    .complaint-title p{
+
+        font-size:10px;
+
+        line-height:1.4;
+
+    }
+
+    .complaint-header img{
+
+        width:120px;
+
+        margin-top:5px;
+
+    }
+
+    /* Form */
+
+    .complaint-form{
+
+        padding:12px;
+
+    }
+
+    .form-group{
+
+        margin-bottom:12px;
+
+    }
+
+    .form-group label{
+
+        font-size:12px;
+
+        margin-bottom:5px;
+
+    }
+
+    .form-group input,
+
+    .form-group select,
+
+    .form-group textarea{
+
+        padding:10px 12px;
+
+        font-size:13px;
+
+        border-radius:6px;
+
+    }
+
+    .form-group textarea{
+
+        min-height:80px;
+
+    }
+
+    /* File Upload */
+
+    input[type=file]{
+
+        font-size:12px;
+
+    }
+
+    /* Submit */
+
+    .submit-btn{
+
+        padding:12px;
+
+        font-size:14px;
+
+        border-radius:6px;
+
+    }
+
+}
+/* ===================================
+   Input Group
+=================================== */
+
+.input-group{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.input-icon{
+
+    width:38px;
+
+    height:38px;
+
+    background:#fff8f2;
+
+    border:1px solid #ffd3a8;
+
+    border-radius:8px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#ff7a00;
+
+    flex-shrink:0;
+
+}
+
+.input-group input,
+
+.input-group select,
+
+.input-group textarea{
+
+    flex:1;
+
+}
+/* ===================================
+   Upload Box
+=================================== */
+
+.upload-box{
+
+    border:2px dashed #ffb56a;
+
+    background:#fff8f1;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.upload-box input{
+
+    display:none;
+
+}
+
+.upload-label{
+
+    background:#ff7a00;
+
+    color:#fff;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.upload-label:hover{
+
+    background:#e96f00;
+
+}
+
+#fileName{
+
+    font-size:13px;
+
+    color:#666;
+
+}
+
+.form-group small{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#777;
+
+    font-size:12px;
+
+}
+/* ==============================
+   Mobile Text Fix
+================================= */
+
+@media (max-width: 768px) {
+
+    .logo-section h1 {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .logo-section p {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .logo-section {
+        line-height: 1.3;
+    }
+
+    .logo-section img {
+        width: 50px;
+        height: auto;
+    }
+
+    /* Header text */
+    header h1 {
+        font-size: 18px;
+    }
+
+    header p {
+        font-size: 11px;
+    }
+
+    /* General text */
+    body {
+        font-size: 14px;
+    }
+}

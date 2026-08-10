@@ -1,0 +1,830 @@
+/* ===================================
+   MOBILE (0px - 480px)
+=================================== */
+
+@media screen and (max-width:480px){
+
+    body{
+        background:#f2f4f8;
+        overflow-x:hidden;
+    }
+
+    .container,
+    .complaint-container{
+        width:100%;
+        max-width:100%;
+        margin:0;
+        border-radius:0;
+        box-shadow:none;
+    }
+
+/* ===================================
+   MOBILE HERO
+   Exact proportional layout
+=================================== */
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:3 / 1;
+
+    min-height:0;
+
+    padding:0;
+
+    margin:0;
+
+    background:#fff0df;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+
+/* ===================================
+   Hero Content
+=================================== */
+
+.hero-content {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+/* ===================================
+   MOBILE LOGO
+=================================== */
+
+.hero-left{
+
+    position:absolute;
+
+    left:0;
+
+    top:-16%;
+
+    width:28%;
+
+    height:60%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:0 5px 0 0;
+
+    margin:0;
+
+     border:none !important;
+
+    z-index:10;
+
+}
+
+.hero-left img{
+    display: block;
+
+    width: 55%;
+    height: auto;
+
+    max-width: 100%;
+    object-fit: contain;
+
+    opacity: 1;
+    visibility: visible;
+}
+/* ===================================
+   MOBILE TEXT - COMPACT
+=================================== */
+
+.hero-text{
+
+    position:absolute;
+
+    left:22%;
+
+    top:8%;
+
+    width:48%;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.hero-tagline{
+
+    font-size:9px;
+
+    line-height:1;
+
+    margin:0 0 3px;
+
+    white-space:nowrap;
+
+}
+
+.hero-text h2 {
+    margin: 0 0 3px;
+    padding: 0;
+
+    font-size: clamp(11px, 2vw, 21px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: clip;
+}
+
+.hero-subtitle{
+
+    display:block;
+
+    font-size:9px;
+
+    line-height:1.15;
+
+    margin:0;
+
+}
+
+
+/* ===================================
+   MOBILE LEADER
+=================================== */
+
+.hero-right{
+
+    position:absolute;
+
+    right:0;
+
+    bottom:60%;
+
+    width:27%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:flex-end;
+
+    z-index:5;
+
+}
+
+.hero-right img{
+
+    display:block;
+
+    width:100px;
+
+    height:auto;
+
+    max-width:100%;
+
+    max-height:100%;
+
+    object-fit:contain;
+
+    object-position:bottom right;
+
+    visibility:visible;
+
+    opacity:1;
+
+}
+
+/* ===================================
+   Orange Button
+=================================== */
+
+.hero-btn{
+
+    position:absolute;
+
+    left:12%;
+
+    bottom:73%;
+
+    width:60%;
+
+    margin:0;
+
+    padding:0;
+
+    z-index:20;
+
+}
+
+
+.hero-btn a{
+
+    display:block;
+
+    width:100%;
+
+    padding:2.5% 1%;
+
+    background:#ff7600;
+
+    color:#fff;
+
+    border-radius:50px;
+
+    text-align:center;
+
+    font-size:clamp(5px, 2vw, 10px);
+
+    line-height:1.1;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+    /* Banner */
+
+    .banner img{
+        width:100%;
+        height:auto;
+    }
+
+    /* Announcement */
+
+    .announcement{
+        margin:10px;
+        padding:10px;
+    }
+
+    .announcement h3{
+        font-size:12px;
+    }
+
+    .announcement p{
+        font-size:10px;
+    }
+
+    /* Services */
+
+    .services{
+        padding:10px;
+        gap:10px;
+    }
+
+    .service-card{
+        padding:12px 6px;
+    }
+
+    .service-card h3{
+        font-size:11px;
+    }
+
+    .service-card p{
+        font-size:9px;
+    }
+
+    .icon{
+        width:42px;
+        height:42px;
+        font-size:18px;
+    }
+
+    /* Bottom Navigation */
+
+    .bottom-nav{
+        height:60px;
+    }
+
+    .bottom-nav span{
+        font-size:10px;
+    }
+
+}
+/* ===================================
+   TABLET (481px - 768px)
+=================================== */
+
+@media screen and (min-width:481px) and (max-width:768px){
+
+    body{
+        background:#f2f4f8;
+    }
+
+    .container,
+    .complaint-container{
+        width:100%;
+        max-width:700px;
+        margin:20px auto;
+        border-radius:20px;
+    }
+
+   /* ===================================
+       Hero - Tablet
+    =================================== */
+
+.hero{
+    width:100%;
+    aspect-ratio:3 / 1;
+    padding:0;
+    overflow:hidden;
+    position:relative;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    padding:0;
+
+    margin:0;
+
+    grid-template-columns: 48px 1fr 65px;
+
+}
+
+
+/* ===================================
+   HERO ELEMENTS - MOBILE
+=================================== */
+
+.hero-left{
+
+    position:absolute;
+
+    left:0;
+
+    top:18%;
+
+    width:24%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding-right:5px;
+
+    border-right:none;
+
+}
+
+.logo{
+
+    width:55%;
+
+    height:auto;
+
+    min-width:0;
+
+    object-fit:contain;
+
+}
+
+
+/* Text */
+
+.hero-text{
+
+    position:absolute;
+
+    left:25%;
+
+    top:7%;
+
+    width:50%;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.hero-tagline{
+
+    font-size:9px;
+
+    line-height:1.1;
+
+    margin:0 0 3px;
+
+    white-space:nowrap;
+
+}
+
+.hero-text h2{
+
+    font-size:20px;
+
+    font-weight:800;
+
+    line-height:1.02;
+
+    margin:0 0 4px;
+
+}
+
+.hero-subtitle{
+
+    display:block;
+
+    font-size:8px;
+
+    line-height:1.25;
+
+    margin:0;
+
+}
+
+
+/* Leader */
+
+.hero-right{
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:27%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:flex-end;
+
+}
+
+.hero-right img{
+
+    width:100%;
+
+    height:auto;
+
+    max-width:100%;
+
+    max-height:100%;
+
+    object-fit:contain;
+
+    object-position:bottom right;
+
+}
+
+
+/* Button */
+
+.hero-btn{
+
+    position:absolute;
+
+    left:25%;
+
+    bottom:6%;
+
+    width:50%;
+
+    margin:0;
+
+    padding:0;
+
+    z-index:20;
+
+}
+
+.hero-btn a{
+
+    display:block;
+
+    width:100%;
+
+    padding:3px 2px;
+
+    background:#ff7600;
+
+    color:#fff;
+
+    border-radius:50px;
+
+    text-align:center;
+
+    font-size:8px;
+
+    line-height:1.1;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+
+    .services{
+        gap:14px;
+    }
+
+}
+/* =========================================
+   DESKTOP (769px AND ABOVE)
+========================================= */
+
+@media screen and (min-width:769px){
+
+    /* =========================
+       BODY / CONTAINER
+    ========================= */
+
+    body{
+        background:#f2f4f8;
+        padding:20px;
+    }
+
+    .container{
+        width:660px;
+        max-width:660px;
+        margin:0 auto;
+
+        border-radius:20px;
+        overflow:hidden;
+    }
+
+    .complaint-container{
+        width:100%;
+        max-width:700px;
+        margin:20px auto;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+        position:relative;
+
+        width:100%;
+        height:170px;
+
+        padding:0;
+        margin:0;
+
+        background:#fff0df;
+
+        border-radius:12px;
+
+        overflow:hidden;
+
+        box-sizing:border-box;
+    }
+
+
+    .hero-content{
+        position:relative;
+
+        width:100%;
+        height:170px;
+
+        padding:0;
+        margin:0;
+
+        display:block;
+
+        box-sizing:border-box;
+    }
+
+
+    /* =========================
+       LOGO
+    ========================= */
+
+    .hero-left{
+        position:absolute;
+
+        left:20px;
+        top:-5%;
+
+        width:80px;
+        height:150px;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        padding:0;
+        margin:0;
+
+        border:none !important;
+
+        z-index:10;
+    }
+
+  .hero-left .logo{
+    width:80px;
+    height:80px;
+    max-width:80px;
+    max-height:80px;
+    object-fit:contain;
+}
+
+    /* =========================
+       TEXT
+    ========================= */
+
+      .hero-text{
+        position:absolute;
+
+        left:18%;
+        top:18px;
+
+        width:55%;
+
+        padding:0;
+        margin:0;
+
+        text-align:left;
+
+        z-index:20;
+    }
+
+     .hero-tagline{
+        margin:0 0 3px;
+
+        font-size:10px;
+
+        line-height:1.1;
+
+        letter-spacing:0.6px;
+
+        white-space:nowrap;
+    }
+
+
+    .hero-text h2{
+        margin:0 0 3px;
+        padding:0;
+
+        font-size:20px;
+
+        font-weight:800;
+
+        line-height:1.1;
+
+        white-space:nowrap;
+    }
+
+   .hero-subtitle{
+    display:block;
+
+    margin:0;
+
+    font-size:9px;
+
+    line-height:1.2;
+
+    letter-spacing:0.9px;
+
+    white-space:nowrap;
+}
+
+
+    /* =========================
+       LEADER
+    ========================= */
+
+    .hero-right{
+        position:absolute;
+
+        right:0;
+        bottom:220px;
+
+        width:120px;
+        height:165px;
+
+        display:flex;
+
+        align-items:flex-end;
+        justify-content:flex-end;
+
+        padding:0;
+        margin:0;
+
+        z-index:30;
+
+        visibility:visible;
+        opacity:1;
+    }
+
+    .hero-right img  .hero-right img{
+        width:110px;
+        height:210px;
+
+        max-width:110px;
+        max-height:220px;
+
+        object-fit:contain;
+        object-position:right bottom;
+    }
+
+
+    /* =========================
+       ORANGE BUTTON
+    ========================= */
+
+    .hero-btn{
+        position:absolute;
+
+        left:119px;
+        bottom:285px;
+
+        width:240px;
+
+        margin:0;
+        padding:0;
+
+        display:block;
+
+        z-index:40;
+
+        visibility:visible;
+        opacity:1;
+    }
+
+    .hero-btn a{
+        display:block;
+
+        width:350px;
+
+        padding:6px 10px;
+
+        background:#ff7600;
+        color:#fff;
+
+        border-radius:50px;
+
+        text-align:center;
+
+        font-size:9px;
+
+        line-height:1.1;
+
+        font-weight:700;
+
+        white-space:nowrap;
+
+        text-decoration:none;
+
+        box-sizing:border-box;
+    }
+
+}
+@media screen and (min-width:769px){
+
+    .hero{
+        height:120px !important;
+        min-height:120px !important;
+        max-height:120px !important;
+
+        margin-bottom:0 !important;
+    }
+
+    .hero-content{
+        height:120px !important;
+    }
+
+    /* Hero ke immediately baad ka unwanted space */
+    .hero + *{
+        margin-top:0 !important;
+        padding-top:0 !important;
+    }
+
+}

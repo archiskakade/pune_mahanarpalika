@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>तक्रार नोंदवा</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/complaint.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<div class="container complaint-container">
+
+    <!-- Complaint Header -->
+
+    <section class="complaint-header">
+
+    <div class="complaint-title">
+
+        <div class="title-icon">
+            <i class="fas fa-pen"></i>
+        </div>
+
+        <div>
+            <h1>तक्रार नोंदणी फॉर्म</h1>
+
+            <p>प्रभाग क्र. २६(क) - घोरपडे पेठ - गुरुवार पेठ - समताभूमी</p>
+        </div>
+
+    </div>
+
+    <img src="images/pmc-banner.png" alt="PMC">
+
+    <!-- Close Button -->
+    <button type="button"
+            class="close-btn"
+            onclick="goBack()"
+            aria-label="Close">
+        ×
+    </button>
+
+</section>
+
+    <!-- Complaint Form -->
+
+    <section class="complaint-form">
+    <form id="complaintForm">
+    <!-- Name -->
+
+    <div class="form-group">
+
+    <label>नाव <span>*</span></label>
+
+    <div class="input-group">
+
+        <div class="input-icon">
+            <i class="fas fa-user"></i>
+        </div>
+
+        <input type="text" placeholder="तुमचे पूर्ण नाव">
+
+    </div>
+
+</div>
+    <!-- Mobile -->
+
+    <div class="form-group">
+
+    <label>मोबाईल नंबर <span>*</span></label>
+
+    <div class="input-group">
+
+        <div class="input-icon">
+            <i class="fas fa-mobile-alt"></i>
+        </div>
+
+        <input type="tel" placeholder="१० अंकी मोबाईल नंबर">
+
+    </div>
+
+</div>
+
+    <div class="form-group">
+
+    <label>वार्ड क्रमांक <span>*</span></label>
+
+    <div class="input-group">
+
+        <div class="input-icon">
+            <i class="fas fa-map-marker-alt"></i>
+        </div>
+
+        <select>
+
+            <option>वार्ड निवडा</option>
+            <option>वार्ड 26 (क)</option>
+            <option>वार्ड 27</option>
+
+        </select>
+
+    </div>
+
+</div>
+
+    <!-- Complaint Type -->
+
+    <div class="form-group">
+
+        <label>तक्रारीचा प्रकार <span>*</span></label>
+
+        <select>
+
+            <option>तक्रारीचा प्रकार निवडा</option>
+            <option>पाणीपुरवठा</option>
+            <option>स्वच्छता</option>
+            <option>रस्ता</option>
+            <option>स्ट्रीट लाईट</option>
+
+        </select>
+
+    </div>
+
+    <!-- Complaint Details -->
+
+    <div class="form-group">
+
+        <label>तक्रारीचा तपशील <span>*</span></label>
+
+        <textarea rows="5"
+            placeholder="तक्रारीचे संपूर्ण वर्णन लिहा..."></textarea>
+
+    </div>
+    <!-- Address -->
+
+<div class="form-group">
+
+    <label>पत्ता <span>*</span></label>
+
+    <textarea rows="3" placeholder="तुमचा पूर्ण पत्ता लिहा"></textarea>
+
+</div>
+
+<!-- Landmark -->
+
+<div class="form-group">
+
+    <label>जवळचे ठिकाण</label>
+
+    <input type="text" placeholder="उदा. शाळा, मंदिर, हॉस्पिटल">
+
+</div>
+
+<!-- Upload Photo -->
+
+<div class="form-group">
+
+    <label>फोटो अपलोड करा (पर्यायी)</label>
+
+    <div class="upload-box">
+
+        <label for="complaintImage" class="upload-label">
+
+            <i class="fas fa-camera"></i>
+
+            <span>Choose File</span>
+
+        </label>
+
+        <input type="file" id="complaintImage" accept="image/*">
+
+        <span id="fileName">No file chosen</span>
+
+    </div>
+
+    <small>फोटो अपलोड केल्यास तक्रार समजून घेण्यास मदत होईल.</small>
+
+</div>
+
+<!-- Submit Button -->
+
+<div class="form-group">
+
+    <button type="submit" class="submit-btn">
+
+        <i class="fas fa-paper-plane"></i>
+
+        तक्रार सबमिट करा
+
+    </button>
+
+</div>
+<div class="success-card">
+
+    <div class="success-left">
+
+        <div class="success-icon">
+            <i class="fas fa-shield-alt"></i>
+        </div>
+
+        <div class="success-text">
+
+            <h4>आपली तक्रार नोंदवल्यानंतर संबंधित विभागाकडे पाठवली जाईल.</h4>
+
+            <p>तक्रार क्रमांक तुम्हाला SMS द्वारे कळवला जाईल.</p>
+
+        </div>
+
+    </div>
+
+    <div class="success-right">
+
+        <i class="fas fa-check"></i>
+
+    </div>
+
+</div>
+</form>
+
+</section>
+<!-- =========================
+     COMPLAINT FOOTER
+========================= -->
+
+<footer class="complaint-footer">
+
+    <p>© 2026 तक्रार नोंदणी सेवा</p>
+
+    <p>आपली माहिती सुरक्षित ठेवली जाईल.</p>
+
+</footer>
+
+</div>
+    <script src="js/complaint.js"></script>
+</body>
+
+</html>

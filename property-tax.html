@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>मालमत्ता कर तक्रार</title>
+
+    <link rel="stylesheet" href="css/property-tax.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="property-page">
+
+    <!-- ==========================
+         Header
+    ========================== -->
+
+    <header class="page-header">
+
+        <div class="header-left">
+
+            <div class="header-icon">
+
+                <i class="fa-solid fa-building"></i>
+
+            </div>
+
+            <div class="header-text">
+
+                <h1>मालमत्ता कर तक्रार</h1>
+
+                <p>
+                    पुणे महानगरपालिका नागरिक सेवा पोर्टल
+                </p>
+
+            </div>
+
+        </div>
+         <button
+        type="button"
+        class="close-btn"
+        onclick="goBack()">
+        ×
+    </button>
+
+    </header>
+
+    <!-- ==========================
+         Form Card
+    ========================== -->
+
+    <div class="form-card">
+
+        <form id="propertyForm">
+
+            <!-- ==========================
+                 Section 1
+            ========================== -->
+
+            <div class="form-section">
+
+                <div class="section-heading">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <h2>१. तक्रारदाराची वैयक्तिक माहिती</h2>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            तक्रारदाराचे नाव
+                            <span>*</span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="तुमचे पूर्ण नाव">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            मोबाईल क्रमांक
+                            <span>*</span>
+
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="मोबाईल क्रमांक">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            ईमेल आयडी
+
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="ईमेल आयडी">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            तक्रारीचा विषय
+                            <span>*</span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="तक्रारीचा विषय">
+
+                    </div>
+
+                </div>
+
+            </div>
+                        <!-- ==========================
+                 Section 2
+            ========================== -->
+
+            <div class="form-section">
+
+                <div class="section-heading">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <h2>२. मालमत्तेची माहिती</h2>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            मालमत्ता क्रमांक
+                            <span>*</span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="मालमत्ता क्रमांक">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            मिळकतधारकाचे नाव
+                            <span>*</span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="मिळकतधारकाचे नाव">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            वॉर्ड
+                            <span>*</span>
+
+                        </label>
+
+                        <select>
+
+                            <option selected disabled>
+                                वॉर्ड निवडा
+                            </option>
+
+                            <option>वार्ड १</option>
+                            <option>वार्ड २</option>
+                            <option>वार्ड ३</option>
+                            <option>वार्ड ४</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            क्षेत्र
+                            <span>*</span>
+
+                        </label>
+
+                        <select>
+
+                            <option selected disabled>
+                                क्षेत्र निवडा
+                            </option>
+
+                            <option>क्षेत्र १</option>
+                            <option>क्षेत्र २</option>
+                            <option>क्षेत्र ३</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group full-width">
+
+                        <label>
+
+                            पूर्ण पत्ता
+                            <span>*</span>
+
+                        </label>
+
+                        <textarea
+                            rows="4"
+                            placeholder="पूर्ण पत्ता लिहा"></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ==========================
+                 Section 3
+            ========================== -->
+
+            <div class="form-section">
+
+                <div class="section-heading">
+
+                    <i class="fa-solid fa-money-bill-wave"></i>
+
+                    <h2>३. कराची माहिती</h2>
+
+                </div>
+
+                <div class="tax-grid">
+
+                    <div class="tax-card">
+
+                        <h4>एकूण कर</h4>
+
+                        <input
+                            type="number"
+                            placeholder="₹ 0">
+
+                    </div>
+
+                    <div class="tax-card">
+
+                        <h4>भरलेली रक्कम</h4>
+
+                        <input
+                            type="number"
+                            placeholder="₹ 0">
+
+                    </div>
+
+                    <div class="tax-card">
+
+                        <h4>बाकी रक्कम</h4>
+
+                        <input
+                            type="number"
+                            placeholder="₹ 0">
+
+                    </div>
+
+                    <div class="tax-card">
+
+                        <h4>कर वर्ष</h4>
+
+                        <input
+                            type="text"
+                            placeholder="2026-27">
+
+                    </div>
+
+                </div>
+
+            </div>
+                        <!-- ==========================
+                 Section 4
+            ========================== -->
+
+            <div class="form-section">
+
+                <div class="section-heading">
+
+                    <i class="fa-solid fa-file-circle-plus"></i>
+
+                    <h2>४. तक्रारीचे तपशील</h2>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group full-width">
+
+                        <label>
+
+                            तक्रारीचे संपूर्ण वर्णन
+                            <span>*</span>
+
+                        </label>
+
+                        <textarea
+                            rows="6"
+                            placeholder="तुमची तक्रार येथे सविस्तर लिहा..."></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ==========================
+                 Section 5
+            ========================== -->
+
+            <div class="form-section">
+
+                <div class="section-heading">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    <h2>५. फोटो / कागदपत्र अपलोड</h2>
+
+                </div>
+
+                <div class="upload-box">
+
+                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+
+                    <h3>फोटो किंवा PDF अपलोड करा</h3>
+
+                    <p>
+
+                        JPG, PNG किंवा PDF
+
+                        <br>
+
+                        कमाल आकार : 5 MB
+
+                    </p>
+
+                    <input type="file" id="uploadFile">
+
+                </div>
+
+            </div>
+
+            <!-- ==========================
+                 Information
+            ========================== -->
+
+            <div class="info-box">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <div>
+
+                    <h4>महत्त्वाची सूचना</h4>
+
+                    <p>
+
+                        सर्व माहिती काळजीपूर्वक भरा.
+                        चुकीची माहिती दिल्यास तक्रार नाकारली जाऊ शकते.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ==========================
+                 Submit
+            ========================== -->
+
+            <div class="submit-area">
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    तक्रार सबमिट करा
+
+                </button>
+
+            </div>
+
+        </form>
+        <footer class="form-footer">
+
+    <p>© 2026 नागरिक सेवा</p>
+
+    <p>आपली माहिती सुरक्षित ठेवली जाईल.</p>
+
+</footer>
+
+    </div>
+
+</div>
+
+
+<script src="js/property-tax.js"></script>
+
+</body>
+
+</html>

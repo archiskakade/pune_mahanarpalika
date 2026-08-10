@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>स्वच्छता व्यवस्था अर्ज फॉर्म</title>
+
+    <link rel="stylesheet" href="css/sanitation.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sanitation-container">
+
+    <!-- ==========================
+         Header
+    ========================== -->
+
+    <div class="sanitation-header">
+
+        <div class="header-icon">
+
+            <i class="fas fa-trash"></i>
+
+        </div>
+
+        <div class="header-content">
+
+            <h1>स्वच्छता व्यवस्था अर्ज फॉर्म</h1>
+
+            <p>प्रभाग क्र. २६(क) • घोरपडे पेठ • गुरुवार पेठ • समताभूमी</p>
+
+        </div>
+        
+        <button
+    type="button"
+    class="close-btn"
+    onclick="goBack()"
+    aria-label="Close">
+    ×
+</button>
+
+    </div>
+    
+    
+
+    <!-- ==========================
+         Form Card
+    ========================== -->
+
+    <div class="form-card">
+
+        <form id="sanitationForm">
+
+            <!-- ==========================
+                 Section 1
+            ========================== -->
+
+            <div class="form-section">
+
+                <div class="section-title">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <h3>१. अर्जदाराची माहिती</h3>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>अर्जदाराचे नाव <span>*</span></label>
+
+                        <input
+                            type="text"
+                            placeholder="तुमचे पूर्ण नाव">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>मोबाईल क्रमांक <span>*</span></label>
+
+                        <input
+                            type="tel"
+                            placeholder="मोबाईल नंबर">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>ईमेल आयडी</label>
+
+                        <input
+                            type="email"
+                            placeholder="ईमेल आयडी">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>पत्ता <span>*</span></label>
+
+                        <input
+                            type="text"
+                            placeholder="घर क्रमांक, रस्ता, परिसर">
+
+                    </div>
+
+                </div>
+
+            </div>
+                        <!-- ==========================
+                 Section 2
+            ========================== -->
+
+            <div class="form-section">
+
+                <div class="section-title">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <h3>२. कार्यक्रमाची माहिती</h3>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>कार्यक्रम प्रकार <span>*</span></label>
+
+                        <select required>
+
+                            <option value="">कार्यक्रम निवडा</option>
+
+                            <option>लग्न समारंभ</option>
+
+                            <option>सामाजिक कार्यक्रम</option>
+
+                            <option>धार्मिक कार्यक्रम</option>
+
+                            <option>सांस्कृतिक कार्यक्रम</option>
+
+                            <option>इतर</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>कार्यक्रम दिनांक <span>*</span></label>
+
+                        <input type="date" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>कार्यक्रम वेळ <span>*</span></label>
+
+                        <input type="time" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>अपेक्षित उपस्थिती <span>*</span></label>
+
+                        <input
+                            type="number"
+                            placeholder="उदा. 200"
+                            required>
+
+                    </div>
+
+                    <div class="form-group full-width">
+
+                        <label>कार्यक्रमाचे ठिकाण <span>*</span></label>
+
+                        <textarea
+                            rows="4"
+                            placeholder="संपूर्ण पत्ता लिहा"
+                            required></textarea>
+
+                    </div>
+
+                    <div class="form-group full-width">
+
+                        <label>अतिरिक्त माहिती</label>
+
+                        <textarea
+                            rows="4"
+                            placeholder="अधिक माहिती असल्यास लिहा"></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ==========================
+                 Section 3
+            ========================== -->
+
+            <div class="form-section">
+
+                <div class="section-title">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    <h3>३. आवश्यक कागदपत्र</h3>
+
+                </div>
+
+                <div class="upload-box">
+
+                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+
+                    <h4>कागदपत्र अपलोड करा</h4>
+
+                    <p>JPG, PNG किंवा PDF (Max 5 MB)</p>
+
+                    <input type="file" id="uploadFile">
+
+                </div>
+
+            </div>
+                        <!-- ==========================
+                 Section 4
+            ========================== -->
+
+            <div class="form-section">
+
+                <div class="section-title">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <h3>४. अतिरिक्त माहिती</h3>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>स्वच्छता कर्मचारी आवश्यक <span>*</span></label>
+
+                        <select required>
+
+                            <option value="">निवडा</option>
+                            <option>होय</option>
+                            <option>नाही</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>कचरा वाहन आवश्यक <span>*</span></label>
+
+                        <select required>
+
+                            <option value="">निवडा</option>
+                            <option>होय</option>
+                            <option>नाही</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ==========================
+                 Submit Button
+            ========================== -->
+
+            <div class="submit-area">
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    <i class="fas fa-paper-plane"></i>
+
+                    अर्ज सबमिट करा
+
+                </button>
+
+            </div>
+
+            <!-- ==========================
+                 Success Card
+            ========================== -->
+
+            <div class="success-card">
+
+                <i class="fas fa-check-circle"></i>
+
+                <div>
+
+                    <h4>तुमचा अर्ज यशस्वीरित्या सबमिट झाला.</h4>
+
+                    <p>
+
+                        आमची टीम लवकरच तुमच्या अर्जावर कार्यवाही करेल.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+    <!-- ==========================
+     Footer
+========================== -->
+
+<footer class="form-footer">
+
+    <p>© 2026 नागरिक सेवा</p>
+
+    <p>आपली माहिती सुरक्षित ठेवली जाईल.</p>
+
+</footer>
+
+</div>
+
+<script src="js/sanitation.js"></script>
+
+</body>
+
+</html>

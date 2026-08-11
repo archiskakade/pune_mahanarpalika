@@ -8,6 +8,9 @@
 
     <title>PMC Citizen Portal</title>
 
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1f4e79">
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -353,6 +356,41 @@
 </div>
 
 <script src="js/script.js"></script>
+
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker.register("service-worker.js")
+                .then(function (registration) {
+                    console.log("Service Worker registered successfully");
+                })
+                .catch(function (error) {
+                    console.log("Service Worker registration failed:", error);
+                });
+        });
+    }
+</script>
+<!-- Install App Banner -->
+<div id="installBanner" class="install-banner">
+
+    <div class="install-icon">
+        <img src="icons/icon-192.png" alt="PMC Citizen Portal">
+    </div>
+
+    <div class="install-content">
+        <h3>PMC Citizen Portal</h3>
+        <p>Install the app for quick and easy access.</p>
+    </div>
+
+    <button id="installButton" class="install-btn">
+        Install
+    </button>
+
+    <button id="closeInstall" class="close-install">
+        ×
+    </button>
+
+</div>
 
 </body>
 </html>

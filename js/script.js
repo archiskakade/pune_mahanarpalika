@@ -1,35 +1,52 @@
 // ==========================================
+// PMC CITIZEN PORTAL - MAIN JAVASCRIPT
+// ==========================================
+
+
+// ==========================================
 // Show Selected File Name
 // ==========================================
 
-const fileInput = document.getElementById("complaintImage");
+document.addEventListener("DOMContentLoaded", function () {
 
-if (fileInput) {
+    const fileInput =
+        document.getElementById("complaintImage");
 
-    fileInput.addEventListener("change", function () {
+    const fileName =
+        document.getElementById("fileName");
 
-        const fileName =
-            document.getElementById("fileName");
 
-        if (this.files.length > 0) {
+    if (fileInput) {
 
-            fileName.textContent =
-                this.files[0].name;
+        fileInput.addEventListener(
+            "change",
+            function () {
 
-        } else {
+                if (
+                    fileName &&
+                    this.files.length > 0
+                ) {
 
-            fileName.textContent =
-                "No file chosen";
+                    fileName.textContent =
+                        this.files[0].name;
 
-        }
+                } else if (fileName) {
 
-    });
+                    fileName.textContent =
+                        "No file chosen";
 
-}
+                }
+
+            }
+        );
+
+    }
+
+});
 
 
 // ==========================================
-// PWA Install App
+// PWA INSTALL
 // ==========================================
 
 window.deferredPrompt = null;
@@ -41,23 +58,129 @@ window.deferredPrompt = null;
 
 function showInstallBanner() {
 
-    console.log("🔥 showInstallBanner called");
+    console.log(
+        "🔥 showInstallBanner called"
+    );
+
 
     const installBanner =
-        document.getElementById("installBanner");
+        document.getElementById(
+            "installBanner"
+        );
 
-    console.log("🔥 Banner:", installBanner);
 
     if (!installBanner) {
+
+        console.log(
+            "❌ Install banner not found"
+        );
+
         return;
+
     }
 
-    installBanner.style.display = "flex";
+
+    // ==========================================
+    // Check Local Storage
+    // ==========================================
+
+    const alreadyInstalled =
+        localStorage.getItem(
+            "pmcAppInstalled"
+        );
+
+
+    if (
+        alreadyInstalled === "true"
+    ) {
+
+        console.log(
+            "✅ App already installed - popup hidden"
+        );
+
+        installBanner.style.display =
+            "none";
+
+        return;
+
+    }
+
+
+    // ==========================================
+    // Check Standalone Mode
+    // ==========================================
+
+    const isStandalone =
+        window.matchMedia(
+            "(display-mode: standalone)"
+        ).matches;
+
+
+    // ==========================================
+    // Check Window Controls Overlay
+    // ==========================================
+
+    const isWindowControlsOverlay =
+        window.matchMedia(
+            "(display-mode: window-controls-overlay)"
+        ).matches;
+
+
+    // ==========================================
+    // iOS Standalone Check
+    // ==========================================
+
+    const isIOSStandalone =
+        window.navigator.standalone === true;
+
+
+    // ==========================================
+    // App Already Running as Installed App
+    // ==========================================
+
+    if (
+        isStandalone ||
+        isWindowControlsOverlay ||
+        isIOSStandalone
+    ) {
+
+        console.log(
+            "✅ Running as installed app - popup hidden"
+        );
+
+
+        localStorage.setItem(
+            "pmcAppInstalled",
+            "true"
+        );
+
+
+        installBanner.style.display =
+            "none";
+
+
+        return;
+
+    }
+
+
+    // ==========================================
+    // Show Custom Install Popup
+    // ==========================================
+
+    console.log(
+        "📱 App is not installed - showing popup"
+    );
+
+
+    installBanner.style.display =
+        "flex";
+
 }
 
 
 // ==========================================
-// Browser Install Event
+// Browser beforeinstallprompt Event
 // ==========================================
 
 window.addEventListener(
@@ -68,17 +191,25 @@ window.addEventListener(
             "✅ beforeinstallprompt FIRED"
         );
 
-        // Prevent automatic browser popup
+
+        // Stop automatic browser popup
+
         event.preventDefault();
 
+
         // Save install event
-        window.deferredPrompt = event;
+
+        window.deferredPrompt =
+            event;
+
 
         console.log(
             "✅ deferredPrompt saved"
         );
 
-        // Show custom banner
+
+        // Show custom popup
+
         showInstallBanner();
 
     }
@@ -98,15 +229,21 @@ window.addEventListener(
         );
 
 
+        // ==========================================
+        // Get Install Elements
+        // ==========================================
+
         const installBanner =
             document.getElementById(
                 "installBanner"
             );
 
+
         const installButton =
             document.getElementById(
                 "installButton"
             );
+
 
         const closeInstall =
             document.getElementById(
@@ -115,7 +252,7 @@ window.addEventListener(
 
 
         // ==========================================
-        // Show Custom Banner
+        // Show Install Popup
         // ==========================================
 
         showInstallBanner();
@@ -132,19 +269,25 @@ window.addEventListener(
                 async function () {
 
                     console.log(
-                        "Install button clicked"
+                        "✅ Install button clicked"
                     );
 
 
-                    // Check native install prompt
+                    // ==========================================
+                    // Check Install Prompt
+                    // ==========================================
 
-                    if (!window.deferredPrompt) {
+                    if (
+                        !window.deferredPrompt
+                    ) {
 
                         console.log(
                             "❌ Native installation prompt is not available."
                         );
 
+
                         return;
+
                     }
 
 
@@ -156,12 +299,14 @@ window.addEventListener(
 
 
                     // ==========================================
-                    // Get User Choice
+                    // Wait for User Choice
                     // ==========================================
 
                     const result =
-                        await window.deferredPrompt
+                        await window
+                            .deferredPrompt
                             .userChoice;
+
 
                     console.log(
                         "Install choice:",
@@ -170,7 +315,35 @@ window.addEventListener(
 
 
                     // ==========================================
-                    // Clear Prompt
+                    // Check if User Accepted
+                    // ==========================================
+
+                    if (
+                        result.outcome ===
+                        "accepted"
+                    ) {
+
+                        console.log(
+                            "✅ User accepted installation"
+                        );
+
+
+                        localStorage.setItem(
+                            "pmcAppInstalled",
+                            "true"
+                        );
+
+                    } else {
+
+                        console.log(
+                            "❌ User cancelled installation"
+                        );
+
+                    }
+
+
+                    // ==========================================
+                    // Prompt Can Be Used Only Once
                     // ==========================================
 
                     window.deferredPrompt =
@@ -178,7 +351,7 @@ window.addEventListener(
 
 
                     // ==========================================
-                    // Hide Banner
+                    // Hide Popup
                     // ==========================================
 
                     if (installBanner) {
@@ -195,7 +368,7 @@ window.addEventListener(
 
 
         // ==========================================
-        // Close Button
+        // Close Install Popup
         // ==========================================
 
         if (closeInstall) {
@@ -203,6 +376,11 @@ window.addEventListener(
             closeInstall.addEventListener(
                 "click",
                 function () {
+
+                    console.log(
+                        "❌ Install popup closed"
+                    );
+
 
                     if (installBanner) {
 
@@ -232,6 +410,28 @@ window.addEventListener(
             "✅ PMC Citizen Portal installed successfully"
         );
 
+
+        // ==========================================
+        // Save Installation Status
+        // ==========================================
+
+        localStorage.setItem(
+            "pmcAppInstalled",
+            "true"
+        );
+
+
+        // ==========================================
+        // Clear Install Prompt
+        // ==========================================
+
+        window.deferredPrompt =
+            null;
+
+
+        // ==========================================
+        // Hide Install Popup
+        // ==========================================
 
         const installBanner =
             document.getElementById(
